@@ -54,17 +54,16 @@ const Signup = () => {
   );
 
   return (
-    <div className="flex flex-row w-full h-full gap-4">
-      <div className="w-[50%] p-4 pr-0 h-full flex flex-col">
+    <div className="flex flex-row w-full h-full sm:gap-2 lg:gap-4">
+      <div className="w-full md:w-1/2 p-4 pr-4 sm:pr-0 h-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
-          <img src={logo} alt="logo" />
-          <div className="text-[14px] font-[500] flex flex-row items-center gap-2">
-            <p>Already have an account?</p>
-            <p className="underline cursor-pointer text-[#CD7427]">Login</p>
+          <img src={logo} alt="logo" className="w-[5rem] sm:w-fit"/>
+          <div className="text-[14px] font-[500] text-right">
+            <p>Already have an account? <span className="underline cursor-pointer text-[#CD7427] ml-1 sm:ml-2">Login</span></p>
           </div>
         </div>
         <div className="my-auto">
-          <h1 className="text-[24px] font-[600] tracking-[-1.44px] mb-5">
+          <h1 className="text-[24px] text-center sm:text-left font-[600] tracking-[-1.44px] mb-5">
             Create an Account
           </h1>
           <div className="flex flex-col gap-2">
@@ -100,31 +99,10 @@ const Signup = () => {
           </form>
         </div>
       </div>
-      <div className="w-[50%] p-4 pl-0 pr-0 ml-4 mr-4 h-screen relative overflow-clip z-20">
-        <div className="absolute w-full bottom-4 h-[50%] bg-gradient-to-t from-black to-transparent text-white rounded-b-[15px] left-0 right-0 px-12 pt-36 pb-9 flex flex-col justify-between">
-          <p className="text-[20px] font-semibold italic ml-5">Hello</p>
-          <div className="flex flex-row items-center justify-between">
-            <div className="w-[40%]">
-              <Slider />
-            </div>
-            <div className="w-1/2 text-right text-[12px] flex flex-row items-center justify-end gap-2">
-              <p className="font-medium">Name</p>
-              <div className="flex flex-row items-center gap-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="10"
-                  viewBox="0 0 36 36"
-                >
-                  <path
-                    fill="#FFAC33"
-                    d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"
-                  />
-                </svg>
-                <p>(4.0)</p>
-              </div>
-            </div>
-          </div>
+      <div className="hidden sm:block w-[50%] p-4 pl-0 pr-0 ml-4 mr-4 h-screen relative overflow-clip z-20">
+        <div className="absolute w-full bottom-4 h-[70%] bg-gradient-to-t from-black to-transparent text-white rounded-b-[15px] left-0 right-0 sm:px-6 lg:px-12 pt-56 pb-9 flex flex-col justify-between">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16" className="absolute text-white top-48 sm:left-5 md:left-9"><path fill="currentColor" d="M6.848 2.47a1 1 0 0 1-.318 1.378A7.284 7.284 0 0 0 3.75 7.01A3 3 0 1 1 1 10v-.027a3.521 3.521 0 0 1 .01-.232c.009-.15.027-.36.062-.618c.07-.513.207-1.22.484-2.014c.552-1.59 1.67-3.555 3.914-4.957a1 1 0 0 1 1.378.318m7 0a1 1 0 0 1-.318 1.378a7.283 7.283 0 0 0-2.78 3.162A3 3 0 1 1 8 10v-.027a3.521 3.521 0 0 1 .01-.232c.009-.15.027-.36.062-.618c.07-.513.207-1.22.484-2.014c.552-1.59 1.67-3.555 3.914-4.957a1 1 0 0 1 1.378.318"/></svg>
+          <Slider/>
         </div>
         <img
           src={signupDisplayImage}
